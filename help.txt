@@ -1,0 +1,17 @@
+transitive dependency
+
+a depends on  b, b depends on c
+
+=> a depends on c
+
+module modulea{
+requires moduleb;
+}
+
+module modlueb{
+requires modulec; //available only for moduleb
+}
+
+module moduleb{
+requires transitive modulec; //modulec also available for modulea
+}

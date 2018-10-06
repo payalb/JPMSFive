@@ -1,0 +1,3 @@
+module modulec{
+	requires moduleb;
+}
